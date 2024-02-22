@@ -19,10 +19,10 @@ jobs:
       with:
         node-version: 14
 
-    - name: Install dependencies
+    - name: Install Node.js dependencies and Gulp
       run: |
         npm install
-        npm install -g gulp
+        npm install gulp
 
     - name: Run Gulp
-      run: gulp demoTask # Specify the Gulp task you want to run
+      run: npx gulp demoTask # Specify the Gulp task you want to run
