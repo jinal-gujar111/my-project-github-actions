@@ -5,6 +5,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,10 +19,10 @@ jobs:
       with:
         node-version: 14
 
-    - name: Install Node.js dependencies and Gulp
+    - name: Install dependencies
       run: |
         npm install
-        npm install gulp
+        npm install -g gulp
 
     - name: Run Gulp
-      run: npx gulp demoTask # Specify the Gulp task you want to run
+      run: gulp demoTask # Specify the Gulp task you want to run
